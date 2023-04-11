@@ -16,6 +16,12 @@ class Aramer{
     private: int elo;
 
     public:
+    //functions
+
+    int riftToRam(string rank){
+        string ranking = strtok(*rank, " ");
+    }
+
 
     //default constructor
     Aramer(){
