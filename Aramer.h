@@ -16,16 +16,20 @@ class Aramer{
     private: int elo;
 
     public:
+
     //default constructor
     Aramer(){
         cout << "default test" << endl;
     }
     //non default constructor
-    Aramaer(string user){
+    Aramer(string user){
 
         this->user = user;
         this->url = "https://u.gg/lol/profile/na1/" + user + "/overview";
         cout << url << endl;
+        //call webscraping to get rank and make
+
+
     }
 
 };

@@ -3,7 +3,7 @@
 //
 
 #include "Aramer.h"
-#include <iomainip>
+#include <iomanip>
 #include <iostream>
 #include <vector>
 
