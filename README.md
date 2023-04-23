@@ -8,6 +8,7 @@ Firstly I am going to create a aramer.h file:
     * url: concating u.gg profile url with user string
     * rank: webscraping for summoners rift rank
     * elo: taking summoner rift rank and assigning aram elo
+    * rank per game: wins and losses go up/down by base of 15 +- a scalar on the kda
 * Once the aramer is created I am going to store it into a vector in main
 
 After figuring out webscraping and creating aramers, I will need to find a way to increment elo with
