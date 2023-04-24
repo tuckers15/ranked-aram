@@ -1,6 +1,8 @@
 const riotKey = 'RGAPI-9d17717b-ed98-4949-82d6-6e42d0734ebf';
 const sp = '%20'
 const fetch = require("node-fetch");
+const fs = require('fs');
+
 
 getMatchList(fetchSumByName('puuid'));
 
@@ -9,12 +11,23 @@ async function getMatchList(puuid){
     let link = 'https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/'+puuid+'/ids?queue=450start=0&count=20&api_key='
     link += riotKey
 
-    //use link to fetch
     let response = await fetch(link);
-    response = await response.json()
-    console.log(response.matches[0].champion);
+    let matchIds = await response.json();
 
-}   
+    let matches = [];
+
+    for (const id of matchIds) {
+        let matchLink = 'https://americas.api.riotgames.com/lol/match/v5/matches/' + id + '?api_key=' + riotKey;
+        response = await fetch(matchLink);
+        let matchData = await response.json();
+        matches.push(matchData);
+    }
+
+    let matchesJson = JSON.stringify(matches);
+    fs.writeFileSync('matches.json', matchesJson);
+
+  return matches;
+}
 
 async function fetchSumByName(ch){
     
