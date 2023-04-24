@@ -10,7 +10,7 @@ async function getMatchList(puuid){
     link += riotKey
 
     //use link to fetch
-    let reposne = await fetch(link);
+    let response = await fetch(link);
     response = await response.json()
     console.log(response.matches[0].champion);
 
