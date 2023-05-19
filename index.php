@@ -14,12 +14,14 @@
         </script>
 
     </head>
-    <header><h3>League of Dan</h3></header>
+    <body>
+        <header><h3>League of Dan</h3></header>
 
-    <section id = "section1">
+        <section id = "section1">
+            <h>Rank</h2>
+            <p>Deafened Dan:</p>
 
+        </section>
 
-    </section>
-
-
+    </body>
 </html>

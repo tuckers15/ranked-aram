@@ -1,0 +1,23 @@
+{
+  "name": "ranked-aram",
+  "version": "1.0.0",
+  "description": "objective: create a ranked aram simulator for Dan",
+  "type": "module",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuckers15/ranked-aram.git"
+  },
+  "author": "Tucker Schulz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tuckers15/ranked-aram/issues"
+  },
+  "homepage": "https://github.com/tuckers15/ranked-aram#readme",
+  "dependencies": {
+    "node-fetch": "^3.0.0"}
+  
+}
