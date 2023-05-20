@@ -20,7 +20,7 @@
         <section id = "section1">
             <h>Rank</h2>
             <p>Deafened Dan:</p>
-
+            <button onclick="parseJSON()">Parse JSON</button>
         </section>
 
     </body>

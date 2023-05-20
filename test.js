@@ -77,4 +77,24 @@ async function fetchSumByName(usr ,ch){
     
 }
 
+function parseJSON() {
+  fetch('matches.json')
+  .then(response => response.json())
+  .then(data => {
+      // Replace 'your_key' with the actual key in your JSON file
+      const value = data.win;
+
+      if (value == "true") {
+          console.log('The value is true.');
+      } else if (value == "false") {
+          console.log('The value is false.');
+      } else {
+          console.log('The key does not point to a boolean value.');
+      }
+  })
+  .catch(error => {
+      console.log('Error:', error);
+  });
+}
+
 main();
